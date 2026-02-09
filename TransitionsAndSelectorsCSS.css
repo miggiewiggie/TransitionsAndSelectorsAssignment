@@ -1,0 +1,130 @@
+#menuItems{
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    left:0;
+    top:0;
+    z-index: 2;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#jumpMenu{
+    opacity:0;
+    max-height:0;
+    margin:0;
+    visibility: hidden;
+    list-style-type: none;
+    margin-left: -4.5em;
+    transition: max-height 0.5s;
+}
+
+nav button:hover{
+    background-color: grey;
+}
+
+
+#jumpMenu li:hover{
+    background-color: blue;
+    transition: background-color 0.25s;
+}
+#jumpMenu li:hover a{
+    color: white;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article{
+    color: grey;
+    opacity: 50%;
+    width: 15em;
+    text-align: justify;
+    transform: scale(0.90);
+    transition: 2s;
+}
+
+p, a, h1, button{
+    font-family: 'Arial';
+}
+
+article:hover{
+    color: black;
+    opacity: 100%;
+    transform: scale(1);
+    transition: 2s;
+}
+
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    max-height:50%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    transition: max-height 0.7s, opacity 1s;
+}
+
+
+nav button{
+    background-color: yellow;
+    padding: 25px;
+    width: 100%;
+    font-weight: bold;
+}
+
+li{
+    padding: 15px;
+    margin-top: -.85em;
+    margin-bottom: -.85em;
+    margin-left: .05em;
+    margin-right: .55em;
+    background-color: orange;
+    width: 96.5%;
+    border-style:solid;
+    text-align: center;
+}
+
+li a{
+    color: black;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+header{
+    top:0;
+    left:0;
+    text-align:center;
+    background-color: red;
+    width:100%;
+    padding: 0px;
+    position: fixed;
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 23px;
+    z-index: 1;
+}
+
+main{
+    margin-left:230px;
+}
+
+h1{
+    padding-top: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+article p:first-of-type::first-letter{
+    font-family: 'Times New Roman';
+    font-size: 36px;
+}
+
+article p a:after{
+    content:url(arrow.png);
+}
